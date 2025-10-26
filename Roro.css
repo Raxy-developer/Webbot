@@ -1,0 +1,174 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Reset dan Tema Utama */
+:root {
+    --bg-dark: #0d1117;       /* Hitam pekat (GitHub) */
+    --bg-light: #161b22;      /* Hitam kebiruan tua */
+    --border-color: #30363d;  /* Abu-abu kebiruan */
+    --text-primary: #c9d1d9;  /* Putih keabuan */
+    --text-secondary: #8b949e;/* Abu-abu */
+    --accent-blue: #2f81f7;   /* Biru cerah */
+    --accent-blue-hover: #3b8aff;
+    --success: #2da44e;
+    --error: #f85149;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+/* Kartu Panel */
+.card {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+    color: var(--text-primary);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.card p {
+    color: var(--text-secondary);
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* Grup Input */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-primary);
+    font-size: 15px;
+    box-sizing: border-box; /* Penting agar padding tidak merusak lebar */
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(47, 129, 247, 0.3);
+}
+
+/* Tombol */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--accent-blue);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--accent-blue-hover);
+}
+
+button:disabled {
+    background-color: var(--border-color);
+    cursor: not-allowed;
+}
+
+/* Area Status */
+#statusArea {
+    margin-top: 25px;
+    text-align: center;
+}
+
+/* Kode Pemasangan */
+#pairingCodeArea {
+    background-color: var(--bg-dark);
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px dashed var(--border-color);
+}
+
+#pairingCode {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--accent-blue);
+    letter-spacing: 2px;
+    margin: 10px 0;
+}
+
+#pairingCodeArea small {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Pesan Error/Sukses */
+#message {
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+#message.success {
+    background-color: rgba(45, 164, 78, 0.1);
+    border: 1px solid var(--success);
+    color: var(--success);
+}
+#message.error {
+    background-color: rgba(248, 81, 73, 0.1);
+    border: 1px solid var(--error);
+    color: var(--error);
+}
+
+/* Spinner Loading */
+.spinner {
+    width: 24px;
+    height: 24px;
+    border: 3px solid var(--border-color);
+    border-top-color: var(--accent-blue);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 10px auto;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.hidden {
+    display: none;
+}
