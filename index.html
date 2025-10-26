@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Koneksi Bot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h2>Hubungkan Bot Anda</h2>
+            <p>Masukkan nomor WhatsApp Anda (dengan kode negara) untuk mendapatkan kode pemasangan.</p>
+            
+            <div class="input-group">
+                <label for="phoneNumber">Nomor Telepon</label>
+                <input type="text" id="phoneNumber" placeholder="Contoh: 6281234567890">
+            </div>
+            
+            <button id="connectButton">Dapatkan Kode Pemasangan</button>
+            
+            <div id="statusArea">
+                <div id="loading" class="hidden">
+                    <div class="spinner"></div>
+                    <span>Meminta kode...</span>
+                </div>
+                
+                <div id="pairingCodeArea" class="hidden">
+                    <p>Masukkan kode ini di WhatsApp Anda:</p>
+                    <div id="pairingCode"></div>
+                    <small>Buka WhatsApp > Perangkat Tertaut > Tautkan Perangkat > Tautkan dengan nomor telepon.</small>
+                </div>
+
+                <div id="message" class="hidden"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
